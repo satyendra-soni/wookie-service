@@ -1,0 +1,45 @@
+usagesPool(percentageConsumption,freeUsagesPoolQuantity,nextDataBoostValue) ::=<<
+Email Subject: Southern Phone Data Alert.
+Email Text:
+You have now used <percentageConsumption> percent of your included data.<nextDataBoostValue(nextDataBoostValue,freeUsagesPoolQuantity)>
+Thank you,
+Southern Phone Team. >>
+
+nextDataBoostValue(nextDataBoostValue,freeUsagesPoolQuantity) ::=<<
+<if(nextDataBoostValue)>You have received your <nextDataBoostValue> Data Boost of 1 GB for $10.<endif> >>
+
+creditPool(percentageConsumption,freeUsagesPoolQuantity,nextDataBoostValue) ::=<<
+Email Subject: Southern Phone Data Alert.
+Email Text:
+You have now used <percentageConsumption> percent of your $<freeUsagesPoolQuantity> monthly mobile credit.
+Thank you,
+Southern Phone Team. >>
+creditPool100() ::=<<
+Email Subject: Southern Phone Data Alert.
+Email Text:
+You've exceeded call credit. Calls now 99c/min, SMS 25c. Excludes international use.
+Call 131464 for options. This alert may be delayed by 48hr
+Thank you,
+Southern Phone Team. >>
+creditPool101() ::=<<
+Email Subject: Southern Phone Data Alert.
+Email Text:
+You have exceeded your credit.To protect you from bill shock your mobile is barred.
+Contact us on 131464
+Thank you,
+Southern Phone Team. >>
+optusMur(percentageConsumption,nextDataBoostValue) ::=<<
+Email Subject: Southern Phone Data Alert.
+Email Text:
+You have used your included data.
+Thank you,
+Southern Phone Team. >>
+optusMur3(currentDataBoostValue) ::=<<
+Email Subject: Southern Phone Data Alert.
+Email Text:
+You've exceeded your data. To avoid bill shock data is barred. Excess data is 5c/MB.
+Call 131464 for options. This alert may be delayed by 48hrs
+Thank you,
+Southern Phone Team. >>
+defaultTemplate(name) ::=<<
+No Template Found For <name> >>
